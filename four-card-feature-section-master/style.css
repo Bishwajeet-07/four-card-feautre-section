@@ -1,0 +1,140 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+--Red: hsl(0, 78%, 62%);
+--Cyan: hsl(180, 62%, 55%);
+--Orange: hsl(34, 97%, 64%);
+--Blue: hsl(212, 86%, 64%);
+--Dark-Blue: hsl(234, 12%, 34%);
+--Grayish-Blue: hsl(229, 6%, 66%);
+--Light-Gray: hsl(0, 0%, 96%);
+--white:white;
+}
+
+.dark{
+--Dark-Blue: hsl(0, 0%, 31%);
+--Grayish-Blue: hsl(0, 0%, 34%);
+--white:rgba(3, 7, 20, 0.658);
+--Light-Gray: hsl(240, 50%, 2%);
+}
+
+
+body{
+    font-size: 15px;
+    background-color: var(--Light-Gray);
+    font-family: "Poppins",sans-serif;
+    color: var(--Dark-Blue);
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* min-height: 100vh; */
+}
+
+.heading{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-block: 2rem;
+}
+
+.heading h1{
+    color: var(--Dark-Blue);
+}
+.heading h1:nth-child(1){
+    font-weight: 200;
+}
+.heading h1:nth-child(2){
+    font-weight: 600;
+}
+
+.heading p{
+    margin-top: 1rem;
+    color: var(--Grayish-Blue);
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.card-container{
+    display: flex;
+    margin-inline: auto;
+    justify-content: center;
+    align-items: center;
+}
+
+.card{
+    background-color: var(--white);
+    margin: 1rem;
+    margin-block: 2rem;
+    max-width: 300px;
+    padding: 2rem;
+    position: relative;
+    padding-bottom: 7rem;
+
+}
+.card h2{
+    margin-bottom: 1rem;
+    color: var(--Dark-Blue);
+
+}
+.card p{
+    font-size: 12px;
+    color: var(--Grayish-Blue);
+}
+
+.card img{
+    margin-block: 10px;
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+}
+
+.card1{
+    border-radius: 7px;
+    border-top: 5px solid var(--Cyan);
+    box-shadow: 0 10px 20px 1px rgba(0, 0, 0, 0.096);
+
+    
+}
+.card2{
+    border-radius: 7px;
+    border-top: 5px solid var(--Red);
+    box-shadow: 0 10px 20px 1px rgba(0, 0, 0, 0.096);
+
+}
+.card3{
+    border-radius: 7px;
+    border-top: 5px solid var(--Orange);
+    box-shadow: 0 10px 20px 1px rgba(0, 0, 0, 0.096);
+
+}
+.card4{
+    border-radius: 7px;
+    border-top: 5px solid var(--Blue);
+    box-shadow: 0 10px 20px 1px rgba(0, 0, 0, 0.096);
+}
+
+@media (max-width: 600px){
+    .card-container{
+        flex-direction: column;
+    }
+
+    .heading p{
+        margin-inline: 1.6rem;
+        padding: 1rem;
+        margin-top: 0;
+    }
+
+    .card{
+        margin-top: 0;
+    }
+    .card{
+        max-width: 330px;
+    }
+}
